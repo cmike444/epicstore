@@ -1,8 +1,16 @@
 <div class="jumbotron center">
   <h1>Welcome to Epicstore!</h1>
   <p>This is Chris Mikelson's First Ruby on Rails App.</p>
+ 
+<% if user_signed_in? %>
+# Do This
+<% else %>
   <p>
-	<%= link_to "Log in", "#", class: "btn btn-default btn-lg" %>
+  	<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-default btn-lg" %>
+	<%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
 	<%= link_to "Learn More", "http://chrismikelson.com", class: "btn btn-primary btn-lg" %>
   </p>
+  <% end %>
+
+
 </div>
