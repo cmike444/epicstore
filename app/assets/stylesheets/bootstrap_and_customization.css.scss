@@ -7,6 +7,8 @@ $navbar-default-bg: #222;
 $navbar-default-link-color: #eee;
 $navbar-default-link-active-color: #ff9000;
 $navbar-default-link-hover-color: #ff9000;
+$navbar-toggle-border-color: #444;
+$navbar-default-link-active-bg: #222;
 
 // Buttons
 
@@ -24,3 +26,16 @@ $jumbotron-heading-color: #ff9000;
 	text-align:center;
 }
 
+.navbar-default .navbar-toggle {
+	border:0px solid #222;
+	background-color:#222;
+}
+
+.navbar-default .navbar-toggle:hover {
+	border:0px solid #222;
+	background-color:#222;
+}
+
+.navbar-default .navbar-toggle:active {
+	background-color:#222;
+}

@@ -12,3 +12,7 @@
  *= require 'masonry/transitions'
  *= require_tree .
  */
+
+.navbar-default .navbar-toggle {
+border-color: #444;
+}
