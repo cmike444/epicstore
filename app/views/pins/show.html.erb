@@ -7,4 +7,5 @@
 <%= link_to 'Back', pins_path, class: "btn btn-primary" %>
 <% if @pin.user == current_user %>
  <%= link_to 'Edit', edit_pin_path(@pin), class: "btn btn-default" %> 
+ <%= link_to 'Destroy', @pin, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
 <% end %>
