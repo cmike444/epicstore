@@ -31,6 +31,9 @@ gem 'bootstrap-sass'
 # Devise Gem for User Functionality
 gem 'devise', '~> 3.1.0.rc2'
 
+# Image Upload Functionality
+gem 'paperclip', '~> 3.0'
+
 group :development, :test do
 	gem 'sqlite3'
 end
