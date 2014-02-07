@@ -34,6 +34,9 @@ gem 'devise', '~> 3.1.0.rc2'
 # Image Upload Functionality
 gem 'paperclip', '~> 3.0'
 
+# Amazon S3 Web storage
+gem 'aws-sdk', '~> 1.20.0'
+
 group :development, :test do
 	gem 'sqlite3'
 end
