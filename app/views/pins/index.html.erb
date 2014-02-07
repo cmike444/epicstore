@@ -2,12 +2,17 @@
   <% @pins.each do |pin| %>
     <div class="box panel panel-default">
       <%= link_to image_tag(pin.image.url(:medium)), pin %>
-
       <div class="panel-body center">
-        
-        <p><em><%= pin.description %></em></p><br/>
-        <%= link_to 'Details', pin_path(pin), class: 'btn btn-default' %>
-        <%= link_to 'Compare', "#", class: 'btn btn-default' %>
+        <p><%= pin.description %><br/>
+        <em>000.00 Acres</em></p><br/>
+        <%= link_to pin_path(pin), class: 'btn btn-default' do %>
+            <span class="glyphicon glyphicon-list-alt"></span>
+           View
+        <% end %>
+        <%= link_to "#", class: 'btn btn-default' do %>
+        <span class="glyphicon glyphicon-stats"></span>
+          Compare
+        <% end %>
       </div>
         
      

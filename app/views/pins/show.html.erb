@@ -1,4 +1,7 @@
-<%= link_to 'Back', pins_path, class: "btn btn-default" %>
+<%= link_to pins_path, class: "btn btn-default" do %>
+<span class="glyphicon glyphicon-chevron-left"></span>
+Back
+<% end %>
 
 <div class="row">
 	<div class="col-md-offset-2 col-md-8">
@@ -9,8 +12,14 @@
 </p>
 
 <% if @pin.user == current_user %>
- <%= link_to 'Edit', edit_pin_path(@pin), class: "btn btn-default" %> 
- <%= link_to 'Destroy', @pin, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
+ <%= link_to edit_pin_path(@pin), class: "btn btn-default" do %>
+              <span class="glyphicon glyphicon-edit"></span>
+              Edit
+            <% end %>
+            <%= link_to @pin, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" do %>
+              <span class="glyphicon glyphicon-trash"></span>
+              Delete
+            <% end %>
 <% end %>
 </div>
 </div>
